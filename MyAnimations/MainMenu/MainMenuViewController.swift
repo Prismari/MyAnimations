@@ -9,6 +9,7 @@
 import UIKit
 
 class MainMenuViewController: UIViewController {
+    var router: MainMenuRouter?
     
     private lazy var menuCollection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -33,9 +34,8 @@ class MainMenuViewController: UIViewController {
 
 extension MainMenuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "PokerMenu", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PokerMenuViewController") as! PokerMenuViewController
-        self.present(nextViewController, animated:true, completion:nil)
+        //TODO: Добавить анимацию нажатия
+        router?.showAnimation(.empty)
     }
 }
 

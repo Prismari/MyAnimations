@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = MainMenuViewController()
+        window?.rootViewController = mainController()
         window?.makeKeyAndVisible()
     }
 
@@ -36,6 +36,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidEnterBackground(_ scene: UIScene) {
     }
 
-
+    private func mainController() -> UIViewController {
+        let controller = MainMenuViewController()
+        controller.router = MainMenuRouterImp(withMenu: controller)
+        return controller
+    }
 }
 

@@ -15,6 +15,8 @@
 		E121F51324F01A8D00D3D7BA /* MenuItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121F51224F01A8D00D3D7BA /* MenuItemCollectionViewCell.swift */; };
 		E15B027024F021C60062387F /* PokerMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15B026E24F021C60062387F /* PokerMenu.storyboard */; };
 		E15B027424F023970062387F /* PokerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B027324F023970062387F /* PokerMenuViewController.swift */; };
+		E15B067324F02B670062387F /* AnimationsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B067224F02B670062387F /* AnimationsType.swift */; };
+		E15B067524F02B9C0062387F /* MainMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B067424F02B9C0062387F /* MainMenuRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		E121F51224F01A8D00D3D7BA /* MenuItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		E15B026F24F021C60062387F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../../rfmobileschool/trainee/ugorets_maria/13_IOS_UM/AnimationIndividaulTask_13/AnimationIndividaulTask_13/Base.lproj/PokerMenu.storyboard; sourceTree = "<group>"; };
 		E15B027324F023970062387F /* PokerMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokerMenuViewController.swift; sourceTree = "<group>"; };
+		E15B067224F02B670062387F /* AnimationsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsType.swift; sourceTree = "<group>"; };
+		E15B067424F02B9C0062387F /* MainMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 			children = (
 				E121F50024F00DF700D3D7BA /* MainMenuViewController.swift */,
 				E121F51224F01A8D00D3D7BA /* MenuItemCollectionViewCell.swift */,
+				E15B067224F02B670062387F /* AnimationsType.swift */,
+				E15B067424F02B9C0062387F /* MainMenuRouter.swift */,
 			);
 			path = MainMenu;
 			sourceTree = "<group>";
@@ -170,6 +176,8 @@
 			files = (
 				E15B027424F023970062387F /* PokerMenuViewController.swift in Sources */,
 				E121F51324F01A8D00D3D7BA /* MenuItemCollectionViewCell.swift in Sources */,
+				E15B067324F02B670062387F /* AnimationsType.swift in Sources */,
+				E15B067524F02B9C0062387F /* MainMenuRouter.swift in Sources */,
 				E121F50124F00DF700D3D7BA /* MainMenuViewController.swift in Sources */,
 				E121F4FD24F00DF700D3D7BA /* AppDelegate.swift in Sources */,
 				E121F4FF24F00DF700D3D7BA /* SceneDelegate.swift in Sources */,
