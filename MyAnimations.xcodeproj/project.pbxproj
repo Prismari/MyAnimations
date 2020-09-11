@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E11B9F5724F4102A00BC4C24 /* PulsingCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11B9F5624F4102A00BC4C24 /* PulsingCircleViewController.swift */; };
 		E121F4FD24F00DF700D3D7BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121F4FC24F00DF700D3D7BA /* AppDelegate.swift */; };
 		E121F4FF24F00DF700D3D7BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121F4FE24F00DF700D3D7BA /* SceneDelegate.swift */; };
 		E121F50124F00DF700D3D7BA /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121F50024F00DF700D3D7BA /* MainMenuViewController.swift */; };
@@ -17,9 +18,11 @@
 		E15B027424F023970062387F /* PokerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B027324F023970062387F /* PokerMenuViewController.swift */; };
 		E15B067324F02B670062387F /* AnimationsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B067224F02B670062387F /* AnimationsType.swift */; };
 		E15B067524F02B9C0062387F /* MainMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B067424F02B9C0062387F /* MainMenuRouter.swift */; };
+		E16918AA24F92550004119F0 /* BlobsLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16918A924F92550004119F0 /* BlobsLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E11B9F5624F4102A00BC4C24 /* PulsingCircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsingCircleViewController.swift; sourceTree = "<group>"; };
 		E121F4F924F00DF700D3D7BA /* MyAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E121F4FC24F00DF700D3D7BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E121F4FE24F00DF700D3D7BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		E15B027324F023970062387F /* PokerMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokerMenuViewController.swift; sourceTree = "<group>"; };
 		E15B067224F02B670062387F /* AnimationsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsType.swift; sourceTree = "<group>"; };
 		E15B067424F02B9C0062387F /* MainMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuRouter.swift; sourceTree = "<group>"; };
+		E16918A924F92550004119F0 /* BlobsLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobsLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E11B9F5524F40FEC00BC4C24 /* PulsingCircle */ = {
+			isa = PBXGroup;
+			children = (
+				E11B9F5624F4102A00BC4C24 /* PulsingCircleViewController.swift */,
+				E16918A924F92550004119F0 /* BlobsLayer.swift */,
+			);
+			path = PulsingCircle;
+			sourceTree = "<group>";
+		};
 		E121F4F024F00DF700D3D7BA = {
 			isa = PBXGroup;
 			children = (
@@ -67,7 +80,8 @@
 				E121F51024F00E5000D3D7BA /* Resources */,
 				E121F4FC24F00DF700D3D7BA /* AppDelegate.swift */,
 				E121F4FE24F00DF700D3D7BA /* SceneDelegate.swift */,
-				E15B026924F020450062387F /* PokerMenuAnimation */,
+				E11B9F5524F40FEC00BC4C24 /* PulsingCircle */,
+				E15B026924F020450062387F /* PokerMenu */,
 				E121F51124F01A3A00D3D7BA /* MainMenu */,
 				E121F50A24F00DF900D3D7BA /* Info.plist */,
 			);
@@ -94,13 +108,13 @@
 			path = MainMenu;
 			sourceTree = "<group>";
 		};
-		E15B026924F020450062387F /* PokerMenuAnimation */ = {
+		E15B026924F020450062387F /* PokerMenu */ = {
 			isa = PBXGroup;
 			children = (
 				E15B027324F023970062387F /* PokerMenuViewController.swift */,
 				E15B026E24F021C60062387F /* PokerMenu.storyboard */,
 			);
-			path = PokerMenuAnimation;
+			path = PokerMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +193,8 @@
 				E15B067324F02B670062387F /* AnimationsType.swift in Sources */,
 				E15B067524F02B9C0062387F /* MainMenuRouter.swift in Sources */,
 				E121F50124F00DF700D3D7BA /* MainMenuViewController.swift in Sources */,
+				E16918AA24F92550004119F0 /* BlobsLayer.swift in Sources */,
+				E11B9F5724F4102A00BC4C24 /* PulsingCircleViewController.swift in Sources */,
 				E121F4FD24F00DF700D3D7BA /* AppDelegate.swift in Sources */,
 				E121F4FF24F00DF700D3D7BA /* SceneDelegate.swift in Sources */,
 			);
