@@ -19,12 +19,7 @@ class PokerMenuViewController: UIViewController {
     @IBOutlet weak var hideButtonView: UIButton!
     
     @IBAction func hideButton(_ sender: Any) {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.collapseMenu()
-            self.menu.transform = .identity
-            self.settingsButton.layoutIfNeeded()
-            self.hideButtonView.alpha = 0.0
-        })
+        hideButtons()
     }
     
     private var scaleTransformCoefficient: CGFloat = 1.0
@@ -34,10 +29,13 @@ class PokerMenuViewController: UIViewController {
         return hideButtonView.frame.height * 1.3
     }()
     
+    private var isCollapsed = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collapseMenu()
         handleTapOnSettingsView()
+        hideButtonsWhenTappedAround()
     }
     
     private func collapseMenu() {
@@ -77,6 +75,7 @@ class PokerMenuViewController: UIViewController {
     }
     
     @objc func openMenu() {
+        isCollapsed = false
         showMenuWithAnimation()
         showHideButtonWithAnimation()
         resetCoefficients()
@@ -109,6 +108,24 @@ class PokerMenuViewController: UIViewController {
            self.hideButtonView.transform = .identity
             self.hideButtonView.alpha = 1.0
         })
+    }
+    
+    func hideButtonsWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideButtons))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func hideButtons() {
+        if isCollapsed {
+            return
+        }
+        UIView.animate(withDuration: 0.5, animations: {
+            self.collapseMenu()
+            self.menu.transform = .identity
+            self.settingsButton.layoutIfNeeded()
+            self.hideButtonView.alpha = 0.0
+        })
+        isCollapsed = true
     }
 }
 
