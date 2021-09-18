@@ -8,7 +8,10 @@
 
 import Foundation
 
-enum AnimationsType {
+enum AnimationsType: Int {
     case poker
+    case progressBar
+    case fallingLeaf
+    case fallingFeather
     case empty
 }

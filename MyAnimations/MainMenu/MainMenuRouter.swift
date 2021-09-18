@@ -22,10 +22,24 @@ class MainMenuRouterImp: MainMenuRouter {
     
     func showAnimation(_ type: AnimationsType) {
         switch type {
-            default:
-                let storyBoard : UIStoryboard = UIStoryboard(name: "PokerMenu", bundle:nil)
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PokerMenuViewController") as! PokerMenuViewController
-                menu?.present(nextViewController, animated:true, completion:nil)
+        case .poker:
+            let storyBoard : UIStoryboard = UIStoryboard(name: "PokerMenu", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PokerMenuViewController") as! PokerMenuViewController
+            menu?.present(nextViewController, animated:true, completion:nil)
+            
+        case .progressBar:
+            let nextViewController = ProgressBarViewController()
+            menu?.present(nextViewController, animated:true, completion:nil)
+
+        case .fallingLeaf:
+            let nextViewController = FallingAnimationViewController()
+            nextViewController.type = .leaf
+            menu?.present(nextViewController, animated:true, completion:nil)
+        case .fallingFeather:
+            let nextViewController = FallingAnimationViewController()
+            nextViewController.type = .feather
+            menu?.present(nextViewController, animated:true, completion:nil)
+        default: break
         }
     }
 }

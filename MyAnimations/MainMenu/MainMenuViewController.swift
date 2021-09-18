@@ -19,7 +19,7 @@ class MainMenuViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .clear
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: MenuItemCollectionViewCell.description())
+        collectionView.register(MenuItemCollectionViewCell.self, forCellWithReuseIdentifier: MenuItemCollectionViewCell.reuseID)
        
         return collectionView
     }()
@@ -34,26 +34,35 @@ class MainMenuViewController: UIViewController {
 
 extension MainMenuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //TODO: Добавить анимацию нажатия
-        router?.showAnimation(.empty)
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            
+            UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
+                cell.transform = CGAffineTransform.init(scaleX: 0.95, y: 0.95)
+            }) { (ended) in
+                
+                UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
+                    cell.transform = CGAffineTransform.init(scaleX: 1, y: 1)
+                    
+                })
+            }
+        }
+        router?.showAnimation(AnimationsType(rawValue: indexPath.row) ?? .empty)
     }
 }
 
 extension MainMenuViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: MenuItemCollectionViewCell.description(),
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: MenuItemCollectionViewCell.reuseID,
             for: indexPath
-        )
-        cell.backgroundColor = #colorLiteral(red: 0.6682489514, green: 0.825932622, blue: 1, alpha: 0.5)
-        cell.layer.borderColor = #colorLiteral(red: 0.2699920535, green: 0.3371974528, blue: 0.3942155838, alpha: 0.5)
-        cell.layer.borderWidth = 2.0
-        cell.layer.cornerRadius = 5.0
-        cell.clipsToBounds = true
+        ) as? MenuItemCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.setup(withType: AnimationsType(rawValue: indexPath.row) ?? .empty)
         return cell
     }
     
